@@ -1,0 +1,343 @@
+/* DT093G Webbutveckling II - Projektuppgift bloggportal - Moa Hjemdahl 2019 */
+/* All website pages */
+* {
+margin: 0;
+padding: 0;
+}
+body {
+    background-color: rgb(53, 53, 53);
+    background-image: url("../pics/hero1.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-family: 'Open Sans';
+    font-size: 0.9em;
+}
+/* Toggle menu */
+.menuBtn {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 80px;
+    border: none;
+    background-color: #fafafa;
+    font-family: 'Special Elite';
+    font-size: 1.4em;
+    padding-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #000;
+    cursor: pointer;
+    z-index: 999;
+}
+.menuBtn span:hover{
+    opacity: 0.5;
+}
+.menuDropdown {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 0px;
+    background-color: #fafafa;
+    z-index: 99;
+    visibility: hidden;
+    transition: all .5s ease-in-out;
+    overflow: hidden;
+}
+.menuDropdown ul {
+    margin-top: 90px;
+    line-height: 40px;
+    list-style: none;    
+}
+.menuDropdown ul li {
+    line-height: 40px;
+    list-style: none;    
+}
+.menuDropdown ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #000;
+    font-family: 'Special Elite';    
+}
+.menuDropdown li a:hover{
+    opacity: 0.5;
+}
+.menuTxt {
+    font-size: 0.7em;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 10px;
+}
+/* Header block */
+header {
+    height: 85px;
+    margin-bottom: 20px;
+}
+.siteTop {
+    width: 100vw;
+    margin-top: 0;
+    height: 80px;
+    background-color: rgb(53, 53, 53);
+    border-bottom: solid 6px #fafafa;
+}
+.siteTop h1 {
+    float: right;
+    font-size: 2.6em;
+    font-family: Oswald;
+    margin: 45px 5px 0 0;
+}
+.siteTop h1 a{
+    color: #fafafa;
+    cursor: pointer;
+    text-decoration: none;
+}
+/* lndex.php */
+/* Backgrund block */
+.bkgBlock {
+    background-color: rgba(240, 238, 235, 0.8);
+    margin: 15px 0;
+    padding: 0 20px 20px 20px;
+}
+h2{
+    font-family: 'Special Elite';
+    color: palevioletred;
+    letter-spacing: 0.05em;
+    margin: 15px 0 10px 0;
+    text-align: center;
+}
+h3 {
+    margin: 15px 20px;
+    font-family: Oswald;
+    font-size: 1.5em;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+/* Users list */
+.list {
+    background-color: rgb(240, 238, 235);
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    max-height: 120px;
+    max-width: 600px;
+    list-style: none;
+    overflow: auto;
+    white-space: nowrap;
+}
+.list li {
+    margin-left: 20px;
+}
+.list li a{
+    line-height: 1.5em;
+    text-decoration: none;
+    font-family: 'Special Elite';
+    color: palevioletred;
+    letter-spacing: 0.05em;
+}
+.list li a:hover{
+    opacity: 0.5;
+}
+/* Blogposts list */
+.postList {
+    margin: 0 auto;
+}
+.post {
+    background-color: rgb(240, 238, 235);
+    padding: 30px 30px;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+h4 {
+    font-family: 'Special Elite';
+    font-size: 1.2em;
+    margin: 15px 0;
+}
+p {
+    line-height: 1.3em;
+}
+p.writer {
+    margin: 15px 0 -5px 0;
+}
+h5 {
+    margin-top: 10px;
+}
+/* login.php & register.php */
+/* Background block */
+.login, .register {
+    background-color: rgba(240, 238, 235, 0.8);
+    margin: auto 0;
+}
+/* Site header */
+.siteHead {
+    text-align: center;
+}
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 20px auto;
+    background-color: rgb(240, 238, 235);
+    padding: 20px 40px;
+}
+.form1 {
+    width: 240px;
+    min-height: 190px;
+}
+label {
+    font-family: Oswald;
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+
+}
+.input {
+    margin: 5px 0 10px 0;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #ffffff;
+}
+/* Buttons */
+.btn {
+    margin-top: 10px;
+    font-family: 'Special Elite';
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+    color: orange;
+}
+/* Function messages */
+.mess {
+    color: darkorange;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+/* user_home.php */
+/* User menu */
+.userMenu {
+    background-color: #fafafa;
+    text-align: right;
+    margin: -20px 0 20px 0;
+}
+.userMenu ul {
+    padding: 5px 0 10px 0;
+}
+.userMenu ul li {
+    display: inline;
+    margin-right: 25px;
+}
+.userMenu ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    font-family: 'Special Elite'; 
+}
+.userMenu ul li a:hover{
+    opacity: 0.5;
+}
+/* Hello frase */
+.loggedin {
+    display: none;
+    font-size: 0;
+}
+/* Buttons in blogposts */
+.btnUser {
+    margin-top: 0;
+    font-family: 'Special Elite';
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    float: right;
+    clear: both;
+    width: 75px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.btnUser:hover {
+    color: orange;
+}
+/* user_write */
+.newPost {
+    margin: 30px auto;
+    padding: 20px 25px;
+    max-width: 800px;
+}
+/* Buttons to the right */
+.btn2 {
+    margin-left: 10px;
+}
+@media only screen and (min-width: 720px) {
+    /* All website pages */
+    .siteTop h1 {
+        font-size: 4em;
+        letter-spacing: 0.05em;
+        margin: 24px 10px 0 0;
+    }
+    /* Background block */
+    .bkgBlock {
+        margin: 15px auto;
+        width: 680px;
+    }
+    /* Blogposts */
+    .post {
+        padding: 30px 70px;
+    }
+    /* login.php/register.php */
+    /* backgrund block */
+    .login, .register {
+        width: 680px;
+        margin: auto;
+    }
+    /* user_homw.php */
+    /* Hello frase */
+    .loggedin {
+        display: inline;
+        font-family: 'Special Elite';
+        color: palevioletred;
+        letter-spacing: 0.05em;
+    }
+    /* Buttons in blogpost */
+    .btnUser {
+        margin-top: 0;
+        font-family: 'Special Elite';
+        padding: 10px 15px;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        color: #000;
+        float: right;
+    }
+}
+@media only screen and (max-width: 320px) {
+    /* All website pages */
+    /* Header */
+    .siteTop h1 {
+        font-size: 2em;
+        margin: 52px 10px 0 0;
+    }
+    /* user_home.php */
+    /* user menu links */
+    .userMenu ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+}
